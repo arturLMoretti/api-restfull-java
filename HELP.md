@@ -1,6 +1,6 @@
 # Diagrama de classe
 
-'''mermaid
+```mermaid
 classDiagram
     class User {
         -String name
@@ -38,4 +38,4 @@ classDiagram
     User --> Feature
     User --> Card
     User --> News
-'''
+```
