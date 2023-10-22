@@ -38,5 +38,4 @@ classDiagram
     User --> Feature
     User --> Card
     User --> News
-
 '''
