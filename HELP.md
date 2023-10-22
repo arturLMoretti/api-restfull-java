@@ -1,24 +1,42 @@
-# Read Me First
-The following was discovered as part of building this project:
+# Diagrama de classe
 
-* The original package name 'dio.santander-bootcamp-java-angular' is invalid and this project uses 'dio.santanderbootcampjavaangular' instead.
+'''mermaid
+classDiagram
+    class User {
+        -String name
+        -Account account
+        -List<Feature> features
+        -List<Card> cards
+        -List<News> news
+    }
+    
+    class Account {
+        -String number
+        -String agency
+        -float balance
+        -float limit
+    }
+    
+    class Feature {
+        -String icon
+        -String description
+        -String name
+    }
+    
+    class Card {
+        -String cardNumber
+        -float cardLimit
+    }
+    
+    class News {
+        -String title
+        -String description
+        -String date
+    }
 
-# Getting Started
+    User --> Account
+    User --> Feature
+    User --> Card
+    User --> News
 
-### Reference Documentation
-For further reference, please consider the following sections:
-
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.5/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.5/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#web)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#data.sql.jpa-and-spring-data)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-
+'''
