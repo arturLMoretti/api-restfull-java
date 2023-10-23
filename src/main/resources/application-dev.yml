@@ -1,15 +1,18 @@
 spring:
-  application:
-    name: primeira-api-bootcamp
   datasource:
     url: jdbc:mysql://localhost:3306/my_database
     username: my_username
     password: my_password
+  application:
+    name: primeira-api-bootcamp
   jpa:
     show-sql: true
     open-in-view: false
     hibernate:
       ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
   h2:
     console:
       enabled: true
